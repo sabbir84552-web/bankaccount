@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+    <div class="bg-gray-800 min-h-screen p-4 flex justify-center items-center">
+       
+        <div id="secsdivid" class="bg-gray-700 p-8 w-full max-w-lg rounded-xl text-center">
+            <h1 class="text-blue-500 text-3xl font-bold ">Creat An Account! to Abdullah MFS</h1>
+            <h3 class="text-white text-2xl font-medium">secure mobile banking</h3>
+            <div class="">
+                <input id="secsinputid" type="text" class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-2" placeholder="please enter your 11 digit of phone number">
+                <input id="secsainputid" type="password" class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-3" placeholder="please enter your custom pin number">
+                <p id="secsperaid" hidden class="text-red-500 mt-3">please enter a phone number and custom pin number</p><button id="secsbid" class="px-6 py-3 text-white bg-blue-600 whitespace-nowrap rounded-xl mt-3">creat account</button>
+            </div>
+        </div>
+         <div id="stsdivid" class="bg-gray-700 p-8 w-full max-w-lg rounded-xl text-center" hidden>
+            <h1 class="text-blue-500 text-3xl font-bold ">weclome! to Abdullah MFS</h1>
+            <h3 class="text-white text-2xl font-medium">secure mobile banking</h3>
+            <div class="">
+                <input id="stsinputid" type="text" class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-2" placeholder="please enter your 11 digit of phone number">
+                <input id="stsainputid" type="password" class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-3" placeholder="please enter your pin number">
+                <p id="stspid" hidden class="text-red-500 mt-3">please enter the same number and pic</p>
+                <button id="stsbid" class="px-6 py-3 text-white bg-blue-600 whitespace-nowrap rounded-xl mt-3">Login</button>
+            </div>
+        </div>
+        <div id="thirsdiv" hidden class="bg-gray-700 p-8 w-full max-w-lg rounded-xl text-center">
+            <!-- <h1 class="text-blue-500 text-3xl font-bold ">weclome! to Abdullah MFS</h1> -->
+            <!-- <h3 class="text-white text-2xl font-medium">secure mobile banking</h3> -->
+             <div class="bg-blue-500 p-8 w-full max-w-lg rounded-2xl">
+                <h2 class="text-white text-2xl font-bold">Current Balance</h2>
+                <h3 class="text-amber-500 text-3xl">$ <span id="amount">100</span></h3>
+             </div>
+            <!-- <div class=""> -->
+                  <button id="cashinbid" class="text-white mr-1 px-6 py-3 bg-green-500 rounded-xl mt-3 ">cash in+</button>
+                  <button id="cashobid" class="text-white ml-15 px-6 py-3 bg-green-500 rounded-xl mt-3 ">cash out-</button>
+                <!-- </div> -->
+
+                <div id="cashinface" class="mt-5 mb-2" hidden>
+                    <h3 class="text-white text-left text-2xl font-medium">Cash in amount</h3>
+                    <input id="cashininput" type="number" class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-2" placeholder="please enter cash in amount here">
+                    <p id="cashinerror" class="text-red-500" hidden>please enter a vaild amount</p>
+                                <button id="Addmoney" class="px-6 text-xl font-medium text-white py-3 bg-blue-600 whitespace-nowrap rounded-xl mt-3">Add Money</button>
+                </div>
+                <div id="cashoutface" class="mt-5" hidden>
+                    <h3 class="text-left text-white text-2xl font-medium">Cash out amount</h3>
+                    <input id="cashoutinput" type="number"class="text-white border px-3 py-4 focus:border-blue-400 rounded-xl w-full bg-gray-500 placeholder-gray-700 outline-none mt-3" placeholder="please enter your pin number">
+                    <p id="cashouterror" class="text-red-500" hidden>please enter a valid amount</p>
+                <button id="cashoutinputb" class="text-white text-xl font-medium px-6 py-3 bg-blue-600 whitespace-nowrap rounded-xl mt-3">cash out</button>    
+                </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
