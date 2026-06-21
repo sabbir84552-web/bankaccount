@@ -63,29 +63,32 @@ cashoutface.removeAttribute("hidden")
 cashinface.setAttribute("hidden",true)
 })
 Addmoney.addEventListener("click",()=>{
-    if (cashininput.value ==="" || cashininput.value <=0) {
+    let currentBalance = parseInt(amount.innerText)
+    let cashInBalance = parseInt(cashininput.value)
+    if (cashininput.value ==="" || cashininput.value <=0 ||  isNaN(cashInBalance)) {
         cashinerror.removeAttribute("hidden")
     }
     else{
         cashinerror.setAttribute("hidden",true)
-        let total = parseInt(amount.innerText) + parseInt(cashininput.value);
+        let total =  currentBalance + cashInBalance ;
         amount.innerText = total
         cashininput.value=""
     }
 })
 cashoutinputb.addEventListener("click",()=>{
-    if (cashoutinput.value ==="" || cashoutinput.value >amount.innerText) {
-        cashouterror.removeAttribute("hidden")
-        alert("insuffisient balance")
+    let currentBalance = parseInt(amount.innerText)
+    let cashOutBalance = parseInt(cashoutinput.value)
+    if (cashoutinput.value ==="" || cashoutinput.value <=0 ||  isNaN(cashOutBalance) || cashOutBalance > currentBalance) {
+        cashouterror.removeAttribute("hidden");
+         alert("insuffisient balance");
     }
     else{
-        cashouterror.setAttribute("hidden",true)
-        let total = parseInt(amount.innerText) - parseInt(cashoutinput.value);
+        cashinerror.setAttribute("hidden",true)
+        let total =  currentBalance - cashOutBalance ;
         amount.innerText = total
         cashoutinput.value=""
     }
 })
-
 
 
 // === "create an account" বাটনে ক্লিক করলে রেজিষ্ট্রেশন পেজে নিয়ে যাবে ===
