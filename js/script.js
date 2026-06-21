@@ -67,6 +67,7 @@ Addmoney.addEventListener("click",()=>{
     let cashInBalance = parseInt(cashininput.value)
     if (cashininput.value ==="" || cashininput.value <=0 ||  isNaN(cashInBalance)) {
         cashinerror.removeAttribute("hidden")
+        cashininput.value="";
     }
     else{
         cashinerror.setAttribute("hidden",true)
@@ -81,6 +82,7 @@ cashoutinputb.addEventListener("click",()=>{
     if (cashoutinput.value ==="" || cashoutinput.value <=0 ||  isNaN(cashOutBalance) || cashOutBalance > currentBalance) {
         cashouterror.removeAttribute("hidden");
          alert("insuffisient balance");
+         cashoutinput.value="";
     }
     else{
         cashinerror.setAttribute("hidden",true)
